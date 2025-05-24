@@ -16,6 +16,13 @@ pagination:
   permalink: '/:num/'
   title: ':title - page :num'
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /assets/default_card.jpg
+
 #seo
 logo: /assets/logo.jpg
 author:
