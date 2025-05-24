@@ -1,0 +1,22 @@
+:root {
+  --measure: 60ch;
+}
+
+* {
+  max-inline-size: var(--measure);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-inline-size: none;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-position: center;
+}
