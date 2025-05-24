@@ -1,0 +1,60 @@
+title: "The Magic Box"
+email: loudpatrick@koop.org
+organization: "The Magic Box Radio"
+description: > # this means to ignore newlines until "baseurl:"
+  The Magic Box brings you the grooviest in jam, psychedelic, funk,
+  and fusion music every Thursday at 3 PM on KOOP radio 91.7 FM and koop.org.
+  Hosted by Loud Patrick, your Boogerbear in the booth.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://themagicbox.radio"
+permalink: ":title"
+excerpt_separator: <!--more-->
+pagination:
+  per_page: 4
+  enabled: true
+  sort_reverse: true
+  permalink: '/:num/'
+  title: ':title - page :num'
+
+#seo
+logo: /assets/logo.jpg
+author:
+  name: Loud Patrick
+  twitter: loudandabrasive
+social:
+  name: The Magic Box / Loud Patrick
+  links:
+    - https://instagram.com/loudandabrasive
+    - https://bsky.app/profile/loudandabrasive.bsky.social
+    - https://www.mixcloud.com/themagicbox/
+
+sitemap:
+  filename: "/sitemap.xml"
+  exclude:
+      - "/atom.xml"
+      - "/feed.xml"
+      - "/feed/index.xml"
+  include_posts:
+      - "/index.html"
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
