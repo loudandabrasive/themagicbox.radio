@@ -1,0 +1,7 @@
+header.home {
+    .title {
+        img {
+            @include desktop { max-width: 45vw; }
+        }
+    }
+}
