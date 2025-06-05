@@ -1,0 +1,19 @@
+- name: KOOP
+  url: https://koop.org/program/the-magic-box/
+  text: "Offical KOOP page"
+  icon: 'fa-solid fa-radio'
+
+- name: Instagram
+  url: https://instagram.com/loudandabrasive
+  text: "Follow on Instagram"
+  icon: 'fa-brands fa-instagram'
+
+- name: Bluesky
+  url: https://bsky.app/profile/loudandabrasive.bsky.social
+  text: "Follow on Bluesky"
+  icon: 'fa-brands fa-bluesky'
+
+- name: Mixcloud
+  url: https://www.mixcloud.com/themagicbox/
+  text: "Listen to the Mixcloud Archive"
+  icon: 'fa-brands fa-mixcloud'

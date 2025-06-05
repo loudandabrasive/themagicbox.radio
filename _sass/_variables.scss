@@ -1,0 +1,32 @@
+/* Neutrals */
+$darkGray: #293434;
+$lightGray: #D6D6D6;
+$white: #f9faf9;
+
+/* Coolors Exported Palette - coolors.co/264653-2a9d8f-c4cf7b-e5771e-e73602-5a3d2b */
+$brown: #5a3d2bff;
+$vermilion: #e73602ff;
+$orange: #e5771eff;
+$citron: #a09e34ff;
+$teal: #2a9d8fff;
+$charcoal: #264653ff;
+$dope: #dbd1b3;
+
+$text: $darkGray;
+
+$desktopMinimum: 992px;
+$veryTinyMax: 576px;
+
+$tileFont: 'Bungee Shade', cursive;
+$headingFont: 'Montserrat Alternates', sans-serif;
+$bodyFont: sans-serif;
+
+$regularFont: $bodyFont;
+
+@mixin mobile { @media (max-width: $veryTinyMax) { @content; } }
+@mixin inbetween { @media (min-width: $veryTinyMax) and (max-width: $desktopMinimum) { @content; } }
+@mixin desktop { @media (min-width: $desktopMinimum) { @content; } }
+@mixin notDesktop { @media (max-width: $desktopMinimum) { @content; } }
+
+.desktop-only { @include mobile  { display: none !important; } }
+.mobile-only  { @include desktop { display: none !important; } }

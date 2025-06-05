@@ -34,3 +34,24 @@
 .cover > h1 {
   margin-block: auto;
 }
+
+/*------------------------------------------------------------*
+* IMAGES
+*------------------------------------------------------------*/
+
+.img-fluid {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/*------------------------------------------------------------*
+* RESPONSIVENESS
+*------------------------------------------------------------*/
+
+$desktopMinimum: 992px;
+$veryTinyMax: 576px;
+
+@mixin mobile { @media (max-width: $veryTinyMax) { @content; } }
+@mixin inbetween { @media (min-width: $veryTinyMax) and (max-width: $desktopMinimum) { @content; } }
+@mixin desktop { @media (min-width: $desktopMinimum) { @content; } }

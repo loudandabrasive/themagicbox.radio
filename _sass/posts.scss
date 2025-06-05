@@ -1,0 +1,41 @@
+@import "_variables";
+
+// === POST CONTENT === === === === ===
+
+.post {
+    header {
+        background-color: $white;
+        margin: auto;
+        @include desktop () { width: 80%; }
+
+        .post-title {
+            font-family: $headingFont;
+            font-weight: lighter;
+            margin: 0.5em auto 0.2em auto;
+            text-align: center;
+        }
+
+        .post-meta {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2em;
+            time, .post-category { font-weight: bold; }
+        }
+    }
+
+    li {
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        line-height: 1.2em;
+    }
+
+    .the-rest {
+        padding: 0 1em;
+    }
+
+    figure.highlight { margin: 0; }
+    .highlight {
+        border-radius: 1em;
+    }
+}

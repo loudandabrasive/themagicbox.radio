@@ -1,0 +1,15 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2em auto;
+
+    color: white;
+
+
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+    }
+}

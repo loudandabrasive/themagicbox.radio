@@ -1,0 +1,141 @@
+@import "_variables";
+
+html { scroll-behavior: smooth; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $dope;
+    color: $text;
+    font-family: $regularFont;
+}
+
+@mixin typo ($minSize, $idealSize, $maxSize, $color) {
+    --min: #{$minSize};
+    --val: #{$idealSize};
+    --max: #{$maxSize};
+    color: $color;
+}
+
+h1 { @include typo(2rem,    5vw,      3.25rem,     $vermilion); }
+h2 { @include typo(1.75rem, 4vw,      2.75rem,  $teal); }
+h3 { @include typo(1.5rem,  3.5vw,   2.25rem,   $orange); }
+h4 { @include typo(1.25rem, 2.75vw,   1.75rem,     $charcoal); }
+h5 { @include typo(1rem,    3vw,      1.5rem,  $citron); font-weight: bold; }
+p,li,code { @include typo(1rem, 2vw,  1.25rem,   $text); }
+pre, pre code { font-size: clamp(0.75rem, 1.5vw, 1rem); }
+
+h1,h2,h3,h4,h5,p,li,code {
+    font-size: clamp(var(--min), var(--val), var(--max));
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: $headingFont;
+    font-weight: lighter;
+}
+
+a {
+    color: $teal;
+    &:hover {
+        color: $charcoal;
+    }
+}
+
+.content {
+    @include mobile { padding: 0 1rem 1rem 1rem; }
+
+    img {
+        @media (min-width: $desktopMinimum) {
+            max-width: 900px;
+        }
+
+        @media (max-width: $desktopMinimum) {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+blockquote {
+    border-left: 0.5em solid $charcoal;
+    padding-left: 1em;
+    margin-left: 0;
+    font-style: italic;
+}
+
+.task-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.blurb p {
+    line-height: clamp(1.5rem, 2.5vw, 1.75rem);
+}
+
+// === CODE === === === === ===
+
+pre {
+    padding: 1rem;
+
+    &.highlight {
+        background: $lightGray;
+        overflow-x: scroll;
+    }
+
+    code {
+        background: #282c34;
+        color: #abb2bf;
+    }
+}
+
+code {
+    background: $darkGray;
+    color: #e5c07b;
+    border-radius: 0.2em;
+    padding: 0 3px;
+}
+
+// === CROSS-SITE COMPONENTS === === === === ===
+
+.outline-link {
+    border: 1px solid $brown;
+    border-radius: 0.6em;
+    padding: .1em .5em;
+
+    color: $text;
+    text-decoration: none;
+
+    &:hover {
+        color: $white;
+        background-color: $brown;
+    }
+}
+
+
+// === HELPERS === === === === ===
+
+.brown { color: $brown; }
+.vermilion { color: $vermilion; }
+.orange { color: $orange; }
+.citron { color: $citron; }
+.teal { color: $teal; }
+.charcoal { color: $charcoal; }
+.dope { color: $dope; }
+
+.hover-brown { &:hover { color: $brown; } }
+.hover-vermilion { &:hover { color: $vermilion; } }
+.hover-orange { &:hover { color: $orange; } }
+.hover-citron { &:hover { color: $citron; } }
+.hover-teal { &:hover { color: $teal; } }
+.hover-charcoal { &:hover { color: $charcoal; } }
+.hover-dope { &:hover { color: $dope; } }
